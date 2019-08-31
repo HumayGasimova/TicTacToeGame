@@ -38,7 +38,7 @@ import Layout from './Layout/layout';
  * Styles
  */
 
-import './app.scss'
+import './app3x3.scss'
 import './Box/box.scss';
 
 /**
@@ -53,7 +53,7 @@ import Pic from '../Image/Pic.jpg';
  * App component definition and export
  */
 
-export class App extends Component {
+export class App3x3 extends Component {
 
    /**
     * Constructor
@@ -510,5 +510,5 @@ export default connect(
          resetMainBox: bindActionCreators(Actions.resetMainBox, dispatch)
       };
    }
-)(App);
+)(App3x3);
 
