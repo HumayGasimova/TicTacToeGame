@@ -1,6 +1,6 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
@@ -16,35 +16,23 @@ import {
     Redirect
 } from 'react-router-dom';
  
- /**
-  * Components
-  */
+/**
+* Components
+*/
+ 
 import App3x3 from './components/app3x3';
 import App4x4 from './components/app4x4';
 import Welcome from './components/WelcomePage/welcomePage';
- /**
-  * Styles
-  */
  
- /**
-  * Actions
-  */
- 
- 
- /**
-  * App component definition and export
-  */
+/**
+* App component definition and export
+*/
  
  export class App extends Component {
- 
-    /**
-     * Constructor
-     */
- 
    
     /**
-     * Methods
-     */
+    * Methods
+    */
 
     renderRoutes = () => {
         if(this.props.isAuthenticated){
@@ -52,43 +40,22 @@ import Welcome from './components/WelcomePage/welcomePage';
                 <div>
                     <Switch>
                         <Route 
-                            // exact 
                             path="/tictactoe"
-                            component={App3x3}
-                            // render={props => <App {...props}/>}
-                            />
+                            component={ App3x3 }
+                        />
                         <Route 
-                            // exact 
                             path="/tictactoe4x4"
-                            component={App4x4}
-                            // render={props => <App4x4 {...props}/>}
-                            />
+                            component={ App4x4 }// render={props => <App4x4 {...props}/>}
+                        />
                         <Route 
                             exact 
                             path="/"
-                            component={Welcome}
-                            />
+                            component={ Welcome }
+                        />
                         <Redirect to="/"/>
-                        
-                        
-                        {/* <Route 
-                            render={()=>(<h1>404</h1>)}/> */}
-                        {/* <Route 
-                            exact 
-                            path="/"
-                            render={()=>(<div>Hey</div>)}/> */}
-
-                        {/* <Route
-                            // exact 
-                            path="/Home"
-                            render={() => (
-                                <Suspense fallback={<div>Loading...</div>}>
-                                    <Home />
-                                </Suspense>
-                            )}/> */}
                     </Switch>
                 </div>
-            )
+            );
         }else{
             return(
                 <div>
@@ -96,19 +63,18 @@ import Welcome from './components/WelcomePage/welcomePage';
                         <Route 
                             exact 
                             path="/"
-                            component={Welcome}
-                            // render={props => <Welcome {...props}/>}
+                            component={ Welcome }
                             />
                         <Redirect to="/"/>
                     </Switch>
                 </div>
-            )
+            );
         }
     }
  
     /**
-     * Markup
-     */
+    * Markup
+    */
  
     render(){
        return(
@@ -118,12 +84,7 @@ import Welcome from './components/WelcomePage/welcomePage';
        );
     }
  }
- 
- /**
-  * Prop types
-  */
- 
-  
+
  export default connect(
     (state) => {
        return {
@@ -131,5 +92,4 @@ import Welcome from './components/WelcomePage/welcomePage';
        };
     }
  )(App);
- 
  

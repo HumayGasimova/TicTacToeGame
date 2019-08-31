@@ -1,39 +1,31 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 /**
- * Components
- */
+* Components
+*/
 
 import Headline from '../Headline/headline';
 import XLogo from '../X/xLogo';
 import OLogo from '../O/oLogo';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './page1.scss';
 
 /**
- * WelcomePage component definition and export
- */
+* Page1 component definition and export
+*/
 
 class Page1 extends Component {
 
-    /**
-    * Constructor
-    */
-
-    constructor (){
-        super();
-    }
-    
     /**
     * Markup
     */

@@ -1,18 +1,18 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React from 'react';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './spinner.scss';
 
 /**
- * spinner component definition and export
- */
+* spinner component definition and export
+*/
 
 const spinner = () => (
         <div className="spinner">

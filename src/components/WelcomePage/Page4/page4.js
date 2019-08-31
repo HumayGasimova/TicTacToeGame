@@ -14,12 +14,8 @@ import React,{
 import './page4.scss';
 
 /**
- * Actions
- */
-
-/**
- * WelcomePage component definition and export
- */
+* Page4 component definition and export
+*/
 
 class Page4 extends Component {
 
@@ -30,7 +26,7 @@ class Page4 extends Component {
    constructor(props) {
         super(props);
         this.state = {
-        showImageButtons: true
+            showImageButtons: true
         }
     }
 

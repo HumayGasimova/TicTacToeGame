@@ -1,6 +1,6 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
@@ -8,24 +8,20 @@ import React,{
 
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './page5.scss';
 
 /**
- * Pictures
- */
+* Pictures
+*/
 
 import pattern from '../../../Image/pngguru.com-id-goqjr.png';
 
 /**
- * Actions
- */
-
-/**
- * WelcomePage component definition and export
- */
+* Page5 component definition and export
+*/
 
 class Page5 extends Component {
 
@@ -36,7 +32,7 @@ class Page5 extends Component {
    constructor(props) {
         super(props);
         this.state = {
-        showImageButtons: true
+            showImageButtons: true
         }
     }
 

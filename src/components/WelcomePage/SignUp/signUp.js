@@ -1,6 +1,6 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
@@ -8,37 +8,35 @@ import React,{
 
 import {
     connect
- } from 'react-redux';
+} from 'react-redux';
 
- import {
+import {
     bindActionCreators
- } from 'redux';
-
- import axios from 'axios';
+} from 'redux';
 
 /**
- * Components
- */
+* Components
+*/
 
 import Input from '../../../library/Input/input';
 import Button from '../../../library/Button/button';
 import EmptyDivV1 from '../Empty/emptyDivV1';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './signUp.scss';
 
 /**
- * Actions
- */
+* Actions
+*/
 
 import * as Actions from '../../../actions';
 
 /**
- * Login component definition and export
- */
+* SignUp component definition and export
+*/
 
 class SignUp extends Component {
 
@@ -118,46 +116,39 @@ class SignUp extends Component {
     * Markup
     */
 
-   inputChangedHandler = (event, inputIdentifier) => {
-    const updatedSignUpForm = {
-        ...this.state.signUpForm
-    };
-    const updatedFormElement = { 
-        ...updatedSignUpForm[inputIdentifier]
-    };
+    inputChangedHandler = (event, inputIdentifier) => {
+        const updatedSignUpForm = {
+            ...this.state.signUpForm
+        };
+        const updatedFormElement = { 
+            ...updatedSignUpForm[inputIdentifier]
+        };
 
-    updatedFormElement.value = event.target.value;
-    updatedFormElement.validation = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
-    updatedFormElement.errorMessage = this.errorMessages(inputIdentifier, updatedFormElement.validation)// {required: "enter valid 'inputIdentifier'"}
-    
+        updatedFormElement.value = event.target.value;
+        updatedFormElement.validation = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
+        updatedFormElement.errorMessage = this.errorMessages(inputIdentifier, updatedFormElement.validation)// {required: "enter valid 'inputIdentifier'"}
+        
 
-    updatedFormElement.touched = "true";
-    updatedFormElement.validField = this.checkValidityOfField(updatedFormElement.validation);
-    updatedSignUpForm[inputIdentifier] = updatedFormElement;
-   
-    // let validField = true;
-    // for(let inputIdentifier in updatedSignUpForm){
-    //     formIsValid = updatedSignUpForm[inputIdentifier].valid === "true" && formIsValid;
-    // }
+        updatedFormElement.touched = "true";
+        updatedFormElement.validField = this.checkValidityOfField(updatedFormElement.validation);
+        updatedSignUpForm[inputIdentifier] = updatedFormElement;
 
-    let formIsValid = true;
-    for(let inputIdentifier in updatedSignUpForm){
-        formIsValid = updatedSignUpForm[inputIdentifier].validField === "true" && formIsValid;
+        let formIsValid = true;
+        for(let inputIdentifier in updatedSignUpForm){
+            formIsValid = updatedSignUpForm[inputIdentifier].validField === "true" && formIsValid;
+        }
+
+        this.setState({
+            signUpForm: updatedSignUpForm,
+            formIsValid: formIsValid
+        });
     }
-
-    this.setState({
-        signUpForm: updatedSignUpForm,
-        formIsValid: formIsValid
-    });
-
-}
 
     checkValidityOfField = (validation) => {
         let checkIfTrue=[]
         validation.map((el) => {
-            checkIfTrue.push(el.valid)
+            checkIfTrue.push(el.valid);
         })
-
         return checkIfTrue.every(x => x === "true").toString();
     }
 
@@ -166,23 +157,22 @@ class SignUp extends Component {
         if(rules){
             rules.map((rule) => {
                 if(rule.required && rule.valid === "false"){
-                    errors.push(`Please enter ${inputIdentifier}`)
+                    errors.push(`Please enter ${inputIdentifier}`);
                 }
                 if(rule.minLength && rule.valid === "false"){
-                    errors.push(`${inputIdentifier.charAt(0).toUpperCase() + inputIdentifier.slice(1)} should be more than 8 charachters!`)
+                    errors.push(`${inputIdentifier.charAt(0).toUpperCase() + inputIdentifier.slice(1)} should be more than 8 charachters!`);
                 }
                 if(rule.isEmail && rule.valid === "false"){
-                    errors.push(`Please enter valid ${inputIdentifier}`)
+                    errors.push(`Please enter valid ${inputIdentifier}`);
                 }
             })
         }
-
-        // console.log(errors)
         return errors;
     }
 
     checkValidity = (value, rules) => {
         let validation = [];
+
         if(rules){
             rules.map((rule) => {
                 if(rule.required){
@@ -208,26 +198,13 @@ class SignUp extends Component {
                     validation.push({...rule,valid: isValid.toString()});
                 }
             })
-        return validation;
+            return validation;
         }
     }
 
     onSubmitHandler = (event) => {
         event.preventDefault();
         this.props.onAuth(this.state.signUpForm.fullName.value, this.state.signUpForm.email.value, this.state.signUpForm.password.value, this.props.isSignUp);
-
-        // const formData = {};
-        // for (let formElementIdentifier in this.state.signUpForm) {
-        //     formData[formElementIdentifier] = this.state.signUpForm[formElementIdentifier].value
-        // }
-
-        // const order = {
-        //     orderData: formData
-        // }
-
-        // axios.post('https://tictactoe-8fa18.firebaseio.com/orders.json', order )
-        // .then(res=>console.log(res))
-        // .catch(err=> console.log(err))
     }
 
     renderInput = () => {
@@ -239,26 +216,21 @@ class SignUp extends Component {
             })
         }
 
-        let errorMessages = null;
         if(this.props.error){
             errorMessages =  (
                  <div>{this.props.error.message}</div>
             );
         }
 
-        console.log(formElementsArray)
         return(
             <form 
                 className="sign-up"
-                // onSubmit={this.onSubmitHandler}
             >
-                {/* {errorMessages} */}
                 <div className="sign-up-child">
                     <div className="sign-up-close-button" onClick={this.closeSignUpForm}>X</div>
                     <div className="sign-up-text">SIGN UP</div>
                     <EmptyDivV1/>
                     {formElementsArray.map((formElement) => {
-                        // console.log(!formElement.config.valid)
                         return(
                             <div key={formElement.id}>
                                 <Input 
@@ -284,7 +256,7 @@ class SignUp extends Component {
                         onClick={this.onSubmitHandler}
                     />
                     <EmptyDivV1/>
-                     <Button 
+                    <Button 
                         className={"button-loginForm"}
                         text={"Switch to Login"}
                         onClick={this.switch}
@@ -327,5 +299,3 @@ export default connect(
        };
     }
  )(SignUp);
-
-// export default SignUp;

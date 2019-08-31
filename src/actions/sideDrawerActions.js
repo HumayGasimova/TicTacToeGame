@@ -6,6 +6,3 @@ export function sideDrawerOpen (option){
         option: option
     }
 };
-
-
-

@@ -1,29 +1,32 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
- } from 'react';
+} from 'react';
  
- /**
-  * Components
-  */
+/**
+* Components
+*/
+
 import X from '../../XO/x';
  
- /**
-  * Styles
-  */
+/**
+* Styles
+*/
+
 import './xLogo.scss';
  
- /**
-  * App component definition and export
-  */
+/**
+* XLogo component definition and export
+*/
+
  export class XLogo extends Component {
  
     /**
-      * Constructor
-      */
+    * Constructor
+    */
  
      constructor(props) {
        super(props);
@@ -31,7 +34,7 @@ import './xLogo.scss';
            slower: 0,
            faster: 0
        }
-   }
+    }
    
     componentDidMount = () => {
         window.addEventListener('scroll', this.handleScroll)
@@ -39,10 +42,10 @@ import './xLogo.scss';
 
     handleScroll = () => {
         let scrollHeight = document.body.scrollTop
-         this.setState({
-             slower: scrollHeight/2,
-             slower2x: scrollHeight/7
-         })
+        this.setState({
+            slower: scrollHeight/2,
+            slower2x: scrollHeight/7
+        })
     }
 
     componentWillUnmount = () => {
@@ -58,28 +61,28 @@ import './xLogo.scss';
                     opacity={"0.9"}
                 />
             </div>
-           )}else{
-               if(this.props.center){
-                    return(
-                        <div  style={{transform: `translate(0px, ${this.state.slower2x}px)`}}>
-                            <X 
-                                className={'smallX'}
-                                opacity={"0.5"}
-                            />
-                        </div>
-                    )
-               }else{
-                    return(
-                        <div  style={{transform: `translate(0px, ${this.state.slower}px)`}}>
-                            <X className={this.props.className}/>
-                        </div>
-                    )
-               }
+           )
+        }else{
+            if(this.props.center){
+                return(
+                    <div  style={{transform: `translate(0px, ${this.state.slower2x}px)`}}>
+                        <X 
+                            className={'smallX'}
+                            opacity={"0.5"}
+                        />
+                    </div>
+                )
+            }else{
+                return(
+                    <div  style={{transform: `translate(0px, ${this.state.slower}px)`}}>
+                        <X className={this.props.className}/>
+                    </div>
+                )
             }
+        }
         
     }
  
-
     render(){
        return(
             <div className={this.props.left ? "leftX": this.props.center ? "centerX" : "rightX"}>

@@ -1,6 +1,6 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
@@ -8,17 +8,18 @@ import React,{
 
 import {
     connect
- } from 'react-redux';
+} from 'react-redux';
  
 /**
- * Styles
- */
+* Styles
+*/
 
 import './selectPlayer.scss';
 
 /**
- * SelectPlayer component definition and export
- */
+* SelectPlayer component definition and export
+*/
+
 class SelectPlayer extends Component {
 
     /**
@@ -59,19 +60,6 @@ class SelectPlayer extends Component {
 
     render(){
         return(
-            // <div>
-            //     <form onSubmit={(e)=>this.handleSubmitForm(e)}>
-            //         <label>
-            //             <input type="radio" name="player" value="X"/>
-            //             Player X
-            //         </label>
-            //         <label>
-            //             <input type="radio" name="player" value="O"/>
-            //             Player O
-            //         </label>
-            //             <input type="submit" value="Start"/>
-            //     </form>
-            // </div>
             <div className="buttons">
                 {this.renderFirstButton()}
                 {this.renderSecondButton()}    
@@ -87,4 +75,3 @@ export default connect(
        };
     }
  )(SelectPlayer);
- 

@@ -1,14 +1,15 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 /**
- * ChoosePlayer component definition and export
- */
+* ChoosePlayer component definition and export
+*/
+
 class ChoosePlayer extends Component {
 
     /**
@@ -42,7 +43,5 @@ class ChoosePlayer extends Component {
         );
     }
 }
-
-
 
 export default ChoosePlayer;

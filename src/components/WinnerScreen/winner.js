@@ -1,24 +1,21 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 /**
- * Components
- */
-
-/**
- * Styles
- */
+* Styles
+*/
 
 import './winner.scss';
 
 /**
  * Winner component definition and export
  */
+
 class Winner extends Component {
 
     /**

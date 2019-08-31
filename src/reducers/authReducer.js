@@ -11,7 +11,7 @@ const initialState = {
     isSignUp: null
 }
 
-const authStart = (state, action) => {
+const authStart = (state) => {
     return updateObject(state, {
         error: null, 
         loading: true

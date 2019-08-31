@@ -1,20 +1,20 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 /**
- * Components
- */
+* Components
+*/
 
 import ButtonImage from '../ButtonImage/buttonImage';
 
 /**
- * Pictures
- */
+* Pictures
+*/
 
 import ticTacToe3x3 from '../../../Image/3x3TicTacToe.png';
 import ticTacToe4x4 from '../../../Image/4x4TicTacToe.png';
@@ -26,14 +26,14 @@ import cat8 from '../../../Image/pngguru.com-id-kvnun.png';
 import cat9 from '../../../Image/pngguru.com-id-znfce.png';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './page3.scss';
 
 /**
- * WelcomePage component definition and export
- */
+* Page3 component definition and export
+*/
 
 class Page3 extends Component {
 
@@ -42,11 +42,11 @@ class Page3 extends Component {
     */
 
    constructor(props) {
-    super(props);
-    this.state = {
-       showImageButtons: true
+        super(props);
+        this.state = {
+            showImageButtons: true
+        }
     }
-}
     
     /**
     * Markup
@@ -79,19 +79,18 @@ class Page3 extends Component {
             <div className="backgroundBoxPage3">
                 <div 
                     className={this.state.showImageButtons ? "buttons-images" : "hide-buttons-images"}
-                    // className="buttons-images"
                     id="buttons-images"
                     >
                     <ButtonImage
                         pathname={"/tictactoe"}
                         text={"TicTacToe 3x3"}
-                        >
+                    >
                         <img src={ticTacToe3x3} alt="ticTacToe3x3"/>
                     </ButtonImage>
                     <ButtonImage
                         pathname={"/tictactoe4x4"}
                         text={"TicTacToe 4x4"}
-                        >
+                    >
                         <img src={ticTacToe4x4} alt="ticTacToe4x4"/>
                     </ButtonImage>
                 </div>

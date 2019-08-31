@@ -1,21 +1,21 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React from 'react';
 import {
     NavLink
- } from 'react-router-dom';
+} from 'react-router-dom';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './navigationItem.scss';
 
 /**
- * NavigationItem component definition and export
- */
+* NavigationItem component definition and export
+*/
 
 export const NavigationItem = (props) => {
     return(
@@ -32,5 +32,3 @@ export const NavigationItem = (props) => {
 }
 
 export default NavigationItem;
-
-

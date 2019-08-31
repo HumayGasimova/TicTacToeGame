@@ -29,8 +29,4 @@ function setPlayer (state = initialState, action){
     }
 }
 
-// export default (history) => combineReducers({
-//     router: connectRouter(history),
-//     rootReducer
-// });
 export default setPlayer;

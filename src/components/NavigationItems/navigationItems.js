@@ -1,18 +1,18 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React from 'react';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './navigationItems.scss';
 
 /**
- * NavigationItems component definition and export
- */
+* NavigationItems component definition and export
+*/
 
 export const NavigationItems = (props) => {
     return(
@@ -23,5 +23,3 @@ export const NavigationItems = (props) => {
 }
 
 export default NavigationItems;
-
-

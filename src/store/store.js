@@ -1,8 +1,7 @@
 import {
     createStore,
     applyMiddleware,
-    compose,
-    combineReducers
+    compose
 } from 'redux';
 
 import {
@@ -18,29 +17,17 @@ import {
 } from 'redux-logger';
 
 import thunk from 'redux-thunk';
-
 import createRootReducer from '../reducers/reducers';
-
-// const middleware = [thunk];
 
 const logger = createLogger({
     collapsed: true
 });
-
 const middleware = [];
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 if (process.env.ENVIRONMENT !== 'production') {
     middleware.push(logger);
 }
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-// export default createStore(
-//     rootReducer, 
-//     composeEnhancers(
-//         applyMiddleware(thunk,logger)
-// ));
-
 
 export const history = createBrowserHistory();
 
@@ -54,14 +41,3 @@ export default createStore(
             )
         )
     );
-
-// export default function configureStore(preloadedState){
-//     const store = createStore(
-//         rootReducer(history),
-//         preloadedState,
-//         compose(
-//             applyMiddleware(logger, routerMiddleware(history))
-//         )
-//     );
-//     return store
-// };

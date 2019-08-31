@@ -1,5 +1,4 @@
 .backgroundBoxPage3 {
-    // position: relative;
     height: 600px;
     background-image: url('../../../Image/background1.png');
     background-size: 100%;
@@ -8,7 +7,6 @@
     background-attachment: fixed;
     overflow: hidden;
     border: 7px solid rgb(13, 48, 42);
-
     .buttons-images {
         display: flex;
         justify-content: space-evenly;
@@ -23,7 +21,6 @@
         padding-top: 70px;
         opacity: 0;
     }
-
 }
 
 .cat1 {
@@ -76,7 +73,6 @@
 
 @media only screen and (max-width: 2600px) and (min-width: 1440px) {
     .backgroundBoxPage3 {
-        // position: relative;
         height: 900px;
         background-image: url('../../../Image/background1.png');
         background-size: 100%;
@@ -85,7 +81,6 @@
         background-attachment: fixed;
         overflow: hidden;
         border: 7px solid rgb(13, 48, 42);
-    
         .buttons-images {
             display: flex;
             justify-content: space-evenly;
@@ -100,8 +95,8 @@
             padding-top: 70px;
             opacity: 0;
         }
-    
     }
+
     .cat1 {
         width: 220px;
         height: 260px;
@@ -132,10 +127,3 @@
         transform: scaleX(-1);
     }
 }
-
-
-
-
-
-
-

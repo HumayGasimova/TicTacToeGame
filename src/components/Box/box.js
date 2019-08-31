@@ -1,27 +1,22 @@
 
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
-import {
-    connect
-} from 'react-redux';
-
-
-
 /**
- * Styles
- */
+* Styles
+*/
 
 import './box.scss';
 
 /**
- * Box component definition and export
- */
+* Box component definition and export
+*/
+
 class Box extends Component {
 
     /**
@@ -49,10 +44,8 @@ class Box extends Component {
     }
    
     componentDidMount = () => {
-        
-       this.evaluateCenter()
+        this.evaluateCenter()
         window.addEventListener('resize', this.evaluateCenter);
-
     };
 
     componentWillUnmount = () => {
@@ -60,7 +53,6 @@ class Box extends Component {
     }
 
     renderInnerBoxes = () => {
-        
         return(
             <div 
                 ref={this.select}
@@ -68,9 +60,6 @@ class Box extends Component {
                 onClick={this.props.onClick}
             >
               {this.props.children}
-              {/* {this.renderWinnerLine()} */}
-              {/* {this.state.centerX}
-             {this.state.centerY} */}
             </div>
         );
     }

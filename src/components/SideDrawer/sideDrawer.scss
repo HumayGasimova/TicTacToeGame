@@ -2,15 +2,11 @@
     border: 5px solid rgb(51, 92, 86);
     border-radius: 7px;
     width: 50%;
-    // height: 100%;
     background: linear-gradient(to bottom,  rgb(185, 226, 220) 0%,  rgb(48, 114, 104) 100%);
     position: absolute;
     left: 0px;
     top: 0px;
-    // animation: moveOpen 0.2s linear;
-    // z-index: 1000;
     transition: all 0.3s ease-out;
-
     &.sideDrawerOpen {
         z-index: 1000;
         opacity: 1;
@@ -23,14 +19,6 @@
     }
 }
 
-
-
-// .sideDrawerClose {
-  
-//     // transform: translateX(200px);
-//     // transition: all 1s linear;
-//     visibility: hidden;
-// }
 .LogoXO-sideDrawer {
     position: relative;
     top: 20px;
@@ -48,37 +36,3 @@
         animation: moveOpen 0.2s linear;
     }
 }
-
-
-
-// @keyframes moveOpen {
-//     from {
-//         width: 0%;
-//     }
-//     to {
-//         width: 50%;
-//     }
-// }
-// @keyframes moveClose {
-//     from {
-//         width:  185px;
-//     }
-//     to {
-//         width: 0px;
-//     }
-// }
-
-
-// div {
-//     border: 1px solid #eee;
-//   }
-//   div > ul {
-//     visibility: hidden;
-//     opacity: 0;
-//     transition: visibility 0s, opacity 0.5s linear;
-//   }
-//   div:hover > ul {
-//     visibility: visible;
-//     opacity: 1;
-//   }
-

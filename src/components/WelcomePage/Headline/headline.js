@@ -1,20 +1,20 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './headline.scss';
 
 /**
- * Headline component definition and export
- */
+* Headline component definition and export
+*/
 
 class Headline extends Component {
 
@@ -25,7 +25,7 @@ class Headline extends Component {
     constructor(props) {
         super(props);
         this.state={
-        slower: 0
+            slower: 0
         }
     }
 

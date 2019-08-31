@@ -1,6 +1,6 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
@@ -8,19 +8,15 @@ import React,{
 
 import {
     connect
- } from 'react-redux';
-
- import {
-    bindActionCreators
- } from 'redux';
+} from 'react-redux';
 
 import {
-    NavLink
- } from 'react-router-dom';
+    bindActionCreators
+} from 'redux';
 
 /**
- * Components
- */
+* Components
+*/
 
 import Page1 from './Page1/page1';
 import Page2 from './Page2/page2';
@@ -33,37 +29,29 @@ import Login from '../WelcomePage/Login/login';
 import Backdrop from '../../library/Backdrop/backdrop';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './welcomePage.scss';
 
 /**
- * Actions
- */
+* Actions
+*/
 
 import * as Actions from '../../actions';
 
 /**
- * WelcomePage component definition and export
- */
+* WelcomePage component definition and export
+*/
 
 class WelcomePage extends Component {
 
     /**
-    * Constructor
-    */
-
-    constructor (){
-        super();
-      
-    }
-    
-    /**
     * Markup
     */
-   renderForm = () => {
-       if(!this.props.isAuthenticated){
+
+    renderForm = () => {
+        if(!this.props.isAuthenticated){
             if(this.props.isSignUp === null && !this.props.loading) return;
             if(this.props.isSignUp && !this.props.loading){
                 return (
@@ -75,17 +63,17 @@ class WelcomePage extends Component {
                     <Login onClick={this.switch}/>
                 )
             }
-        if(this.props.loading){
-            return (
+            if(this.props.loading){
+                return (
                     <Spinner/>
-            )
+                )
+            }
         }
-       }
-   }
+    }
 
-   componentDidMount() {
-       this.props.autoLogin();
-   }
+    componentDidMount() {
+        this.props.autoLogin();
+    }
 
     render(){
         return(
@@ -96,12 +84,12 @@ class WelcomePage extends Component {
                     isAuth={this.props.isAuthenticated}
                     user={this.props.userName}
                     userId={this.props.userId}
-                    />
-               {/* <NavLink className="startGame" to={{ pathname: '/tictactoe'}}>Start Game</NavLink> */}
+                />
                <Page3/>
                <Backdrop 
                     show={this.props.isSignUp !== null && !this.props.isAuthenticated}
-                    onClick={() => this.props.newUser(null)}/>
+                    onClick={() => this.props.newUser(null)}
+                />
                {this.renderForm()}
                <Page4 
                     isAuth={this.props.isAuthenticated}

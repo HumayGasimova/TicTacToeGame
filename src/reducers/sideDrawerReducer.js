@@ -16,5 +16,4 @@ function sideDrawerHandler (state = initialState, action){
     }
 }
 
-
 export default sideDrawerHandler;

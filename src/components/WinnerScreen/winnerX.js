@@ -1,12 +1,12 @@
 /**
- * Libraries
- */
+* Libraries
+*/
+import React from 'react';
 
-import React,{
-    Component
-} from 'react';
-
-import {useSpring, animated} from 'react-spring';
+import {
+    useSpring,
+    animated
+} from 'react-spring';
 
 /**
  * Components
@@ -18,24 +18,25 @@ import Winner from './winner';
 /**
  * WinnerX component definition and export
  */
+
 export const WinnerX = (props) => {
 
     const props1 = useSpring({
-        to:{opacity: 1},
-        from: { opacity: 0},
+        to: { opacity: 1 },
+        from: { opacity: 0 },
         delay: 2000
-      })
-        return(
-            <animated.div 
-                className={props.winnerScreen}
-                style={props1}
-                >
-                    <X className={"xScreen"}/>
-                    <Winner
-                    winner={props.winner}
-                    />
-             </animated.div>
-        );
+    })
+    return(
+        <animated.div 
+            className={props.winnerScreen}
+            style={props1}
+        >
+            <X className={"xScreen"}/>
+            <Winner
+                winner={props.winner}
+            />
+        </animated.div>
+    );
 }
 
 export default WinnerX;

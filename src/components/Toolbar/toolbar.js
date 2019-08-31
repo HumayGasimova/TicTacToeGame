@@ -1,26 +1,26 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 import {
-connect
+    connect
 } from 'react-redux';
 
 import {
-bindActionCreators
+    bindActionCreators
 } from 'redux';
 
 import {
     withRouter
-  } from 'react-router-dom'
+} from 'react-router-dom'
 
 /**
- * Components
- */
+* Components
+*/
 
 import MenuButton from '../MenuButton/menuButton';
 import NavigationItems from '../NavigationItems/navigationItems';
@@ -31,47 +31,43 @@ import SideDrawer from '../SideDrawer/sideDrawer';
 
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './toolbar.scss';
 
 /**
- * Actions
- */
+* Actions
+*/
 
 import * as Actions from '../../actions';
 
 /**
- * MainBox component definition and export
- */
+* Toolbar component definition and export
+*/
 
 class Toolbar extends Component {
 
     /**
-    * Constructor
+    * Methods
     */
-
-    constructor (){
-        super();
-    }
     
+    renderSideDrawer = () => {
+        return(
+            <SideDrawer
+                sideDrawerHandler={() => this.props.sideDrawerIsOpen("No")}
+                sideDrawerOpen={this.props.sideDrawerOpen}
+            />
+        )
+    }
+
+    navigateToWelcomePage = () => {
+        this.props.history.push('/');
+    }
+
     /**
     * Markup
     */
-
-   renderSideDrawer = () => {
-    return(
-       <SideDrawer
-          sideDrawerHandler={() => this.props.sideDrawerIsOpen("No")}
-          sideDrawerOpen={this.props.sideDrawerOpen}
-       />
-    )
- }
-
- navigateToWelcomePage = () => {
-     this.props.history.push('/');
- }
 
     render(){
         return(
@@ -83,26 +79,27 @@ class Toolbar extends Component {
                     <NavigationItem 
                         className={"navigationItem"}
                         path={"/"}
-                        >
+                    >
                         Welcome Page
                     </NavigationItem>   
                     <NavigationItem 
                         className={"navigationItem"}
                         path={"/tictactoe"}
-                        >
-                            TicTacToe3x3
+                    >
+                        TicTacToe3x3
                     </NavigationItem>   
                     <NavigationItem 
                         className={"navigationItem"}
                         path={"/tictactoe4x4"}
-                        >
-                            TicTacToe4x4
+                    >
+                        TicTacToe4x4
                     </NavigationItem>  
                 </NavigationItems>
                 {this.renderSideDrawer()}
                 <Backdrop 
                     show={this.props.sideDrawerOpen === "Yes"}
-                    onClick={() => this.props.sideDrawerIsOpen("No")}/>
+                    onClick={() => this.props.sideDrawerIsOpen("No")}
+                />
                 <MenuButton
                     menuButtonHandler={() => this.props.sideDrawerIsOpen("Yes")}
                 />
@@ -122,5 +119,5 @@ export default connect(
         sideDrawerIsOpen: bindActionCreators(Actions.sideDrawerOpen, dispatch),
        };
     }
- )( withRouter(Toolbar));
+)(withRouter(Toolbar));
  

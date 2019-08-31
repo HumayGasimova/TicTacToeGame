@@ -139,7 +139,5 @@ export function auth(fullName, email, password, isSignup) {
         .catch(err => {
             dispatch(authFail(err.response.data.error));
         })
-           
-       
     }
 };

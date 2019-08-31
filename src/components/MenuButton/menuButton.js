@@ -1,34 +1,38 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './menuButton.scss';
 
 /**
- * SelectPlayer component definition and export
- */
+* SelectPlayer component definition and export
+*/
+
 class MenuButton extends Component {
 
+    /**
+    * Markup
+    */
 
     render(){
         return(
             <div 
                 onClick={this.props.menuButtonHandler}
                 className="menuButton"
-                >
-                   <div className="menuLine"/>
-                   <div className="menuEmptyLine"/>
-                   <div className="menuLine"/>
-                   <div className="menuEmptyLine"/>
-                   <div className="menuLine"/>
+            >
+                <div className="menuLine"/>
+                <div className="menuEmptyLine"/>
+                <div className="menuLine"/>
+                <div className="menuEmptyLine"/>
+                <div className="menuLine"/>
             </div>
         );
     }

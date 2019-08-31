@@ -1,41 +1,41 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 import {
     connect
- } from 'react-redux';
+} from 'react-redux';
 
- import {
+import {
     bindActionCreators
- } from 'redux';
+} from 'redux';
 
 /**
- * Components
- */
+* Components
+*/
 
 import Input from '../../../library/Input/input';
 import Button from '../../../library/Button/button';
 import EmptyDivV1 from '../Empty/emptyDivV1';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './login.scss';
 
 /**
- * Actions
- */
+* Actions
+*/
 
 import * as Actions from '../../../actions';
 
 /**
- * Login component definition and export
- */
+* Login component definition and export
+*/
 
 class Login extends Component {
 
@@ -156,6 +156,7 @@ class Login extends Component {
 
     checkValidity = (value, rules) => {
         let validation = [];
+
         if(rules){
             rules.map((rule) => {
                 if(rule.required){
@@ -182,40 +183,28 @@ class Login extends Component {
                 }
             
             })
-        return validation;
+            return validation;
         }
     }
 
     onSubmitHandler = (event) => {
         event.preventDefault();
         this.props.onAuth(null, this.state.loginForm.email.value, this.state.loginForm.password.value, this.props.isSignUp);
-        // const formData = {};
-
-        // for (let formElementIdentifier in this.state.loginForm) {
-        //     formData[formElementIdentifier] = this.state.loginForm[formElementIdentifier].value
-        // }
-
-        // const order = {
-        //     orderData: formData
-        // }
-
-        // axios.post('/orders.json', order )
-        // .then(res=>console.log(res))
-        // .catch(err=> console.log(err))
     }
 
     renderInput = () => {
         const formElementsArray = [];
+
         for(let key in this.state.loginForm){
             formElementsArray.push({
                 id: key,
                 config: this.state.loginForm[key]
             })
         }
+
         return(
             <form 
                 className="login"
-                // onSubmit={this.onSubmitHandler}
             >
                 <div className="login-child">
                     <div className="login-close-button" onClick={this.closeSignUpForm}>X</div>
@@ -240,18 +229,18 @@ class Login extends Component {
                             </div>
                         )
                     })}
-                <Button 
+                    <Button 
                         className={"button-loginForm"}
                         text={"Login"}
                         disabled={!this.state.formIsValid}
                         onClick={this.onSubmitHandler}
                     />
-                <EmptyDivV1/>
-                <Button 
-                    className={"button-loginForm"}
-                    text={"Switch to Sign Up"}
-                    onClick={this.switch}
-                />
+                    <EmptyDivV1/>
+                    <Button 
+                        className={"button-loginForm"}
+                        text={"Switch to Sign Up"}
+                        onClick={this.switch}
+                    />
                 </div>
             </form>
         )
@@ -277,14 +266,13 @@ class Login extends Component {
 export default connect(
     (state) => {
         return {
-        //    loading: state.auth.loading,
-        isSignUp: state.auth.isSignUp
+            isSignUp: state.auth.isSignUp
         };
      },
     (dispatch) => {
        return {
-        onAuth: bindActionCreators(Actions.auth, dispatch),
-        newUser: bindActionCreators(Actions.userSignUp, dispatch)
+            onAuth: bindActionCreators(Actions.auth, dispatch),
+            newUser: bindActionCreators(Actions.userSignUp, dispatch)
        };
     }
  )(Login);

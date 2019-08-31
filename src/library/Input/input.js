@@ -1,24 +1,24 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 /**
- * Components
- */
+* Components
+*/
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './input.scss';
 
 /**
- * WelcomePage component definition and export
- */
+* Input component definition and export
+*/
 
 class Input extends Component {
 
@@ -134,6 +134,7 @@ class Input extends Component {
             )
         }
     }
+
     /**
     * Markup
     */

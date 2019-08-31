@@ -19,5 +19,3 @@ export function resetGame (){
         type: actionTypes.RESET_GAME
     }
 };
-
-

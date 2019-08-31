@@ -5,87 +5,87 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-        .mainBorder{
+    .mainBorder{
+        width: 310px;
+        height: 310px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .emptyBorderVertical {
+            width: 97px;
+        }
+
+        .borderVertical {
+            border:2px solid#489E93;
+            height: 270px;
+            width: 5px;
+            background-color: #489E93;
+        }
+
+        .mainBorderHorizontal { 
+            position: absolute;
             width: 310px;
             height: 310px;
-            position: absolute;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            
-            .emptyBorderVertical {
-                width: 97px;
+
+            .emptyBorderHorizontal {
+                height: 97px;
             }
 
-            .borderVertical {
-                border:2px solid#489E93;
-                height: 270px;
-                width: 5px;
-                background-color: #489E93;
-            }
-
-            .mainBorderHorizontal { 
-                position: absolute;
-                width: 310px;
-                height: 310px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-
-                .emptyBorderHorizontal {
-                    height: 97px;
-                }
-
-                .borderHorizontal {
-                    border: 2px solid#489E93;
-                    height: 5px;
-                    width: 270px;
-                    background-color: #489E93; 
-                }
-            }
-        
-        }
-
-        .main{
-            background-color:#14bdac;
-            width: 100%;
-
-            .mainBox {
-                padding: 15px;
-                display: flex;
-                justify-content: center;
+            .borderHorizontal {
+                border: 2px solid#489E93;
+                height: 5px;
+                width: 270px;
+                background-color: #489E93; 
             }
         }
+    
+    }
 
-        .text {
-            margin-bottom: 10px;
-            color: rgb(110, 110, 110);
+    .main{
+        background-color:#14bdac;
+        width: 100%;
+
+        .mainBox {
+            padding: 15px;
+            display: flex;
+            justify-content: center;
         }
     }
 
-    .drawScreen {
-        height: 260px;
-        width: 260px;
-        background-color: #14bdac;
-        position: absolute;
+    .text {
+        margin-bottom: 10px;
+        color: rgb(110, 110, 110);
     }
+}
 
-    .drawImages {
-        display: flex;  
-        justify-content: center;
-    }
+.drawScreen {
+    height: 260px;
+    width: 260px;
+    background-color: #14bdac;
+    position: absolute;
+}
 
-    .drawText {
-        color:  #665757;;
-        font-family: 'Verdana';
-        font-size: 35px;
-        text-align: center;
-        margin-bottom: 40px;
-        font-weight: bold;
-    }
+.drawImages {
+    display: flex;  
+    justify-content: center;
+}
 
-    @media only screen and (min-device-width : 425px){
+.drawText {
+    color:  #665757;;
+    font-family: 'Verdana';
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+@media only screen and (min-device-width : 425px){
     .background {
         border: 1px solid rgb(221, 214, 214);
         border-radius: 7px;
@@ -94,7 +94,7 @@
         flex-direction: column;
         align-items: center;
         position: relative;
-        .mainBorder{
+        .mainBorder {
             width: 310px;
             height: 310px;
             position: absolute;
@@ -105,15 +105,15 @@
             .emptyBorderVertical {
                 width: 97px;
             }
-    
+
             .borderVertical {
                 border:2px solid#489E93;
                 height: 270px;
                 width: 5px;
                 background-color: #489E93; 
-               
+                
             }
-    
+
             .mainBorderHorizontal { 
                 position: absolute;
                 width: 310px;
@@ -122,11 +122,10 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-    
                 .emptyBorderHorizontal {
                     height: 97px;
                 }
-    
+
                 .borderHorizontal {
                     border: 2px solid#489E93;
                     height: 5px;
@@ -134,19 +133,18 @@
                     background-color: #489E93; 
                 }
             }
-           
         }
         
         .main{
             background-color:#14bdac;
             width: 100%;
-    
             .mainBox {
                 padding: 15px;
                 display: flex;
                 justify-content: center;
             }
         }
+
         .text {
             margin-bottom: 10px;
             color: rgb(110, 110, 110);

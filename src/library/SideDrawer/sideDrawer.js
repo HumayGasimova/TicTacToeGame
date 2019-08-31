@@ -1,27 +1,26 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React from 'react';
 
 /**
- * Components
- */
+* Components
+*/
 
 import NavigationItems from '../NavigationItems/navigationItems';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './sideDrawer.scss';
 
 /**
- * SideDrawer component definition and export
- */
+* SideDrawer component definition and export
+*/
 
 export const SideDrawer = (props) => {
-
     return(
        <div className="sideDrawer">
            <nav>
@@ -32,5 +31,3 @@ export const SideDrawer = (props) => {
 }
 
 export default SideDrawer;
-
-

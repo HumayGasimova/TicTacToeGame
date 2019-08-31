@@ -13,4 +13,3 @@ export function resetMainBox (){
         type: actionTypes.RESET_MAINBOX,
     }
 };
-

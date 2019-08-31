@@ -1,82 +1,68 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
-    Component,
-    Suspense
- } from 'react';
+  Component
+} from 'react';
  
 import {
-    connect
+  connect
 } from 'react-redux';
 
 import {
-    bindActionCreators
+  bindActionCreators
 } from 'redux';
 
 import {
-    Redirect
+  Redirect
 } from 'react-router-dom';
 
-
- /**
-  * Components
-  */
- 
 /**
- * Actions
- */
+* Actions
+*/
 
 import * as Actions from '../../actions';
  
- /**
-  * Styles
-  */
+/**
+* Styles
+*/
  
 import './logout.scss';
 
+/**
+* Logout component definition and export
+*/
+
+export class Logout extends Component {
+
   /**
-  * Constants
+  * Methods
   */
 
-
+  componentDidMount() {
+    this.props.onLogout();
+  }
+ 
   /**
-  * Actions
+  * Markup
   */
  
+  render() {
+      return <Redirect to="/" />
+  }
 
- /**
-  * Home component definition and export
-  */
+}
 
- export class Logout extends Component {
-
-   componentDidMount () {
-       this.props.onLogout();
-   }
- 
-    /**
-     * Markup
-     */
- 
-    render(){
-       return <Redirect to="/" />
-    }
- }
- 
- /**
-  * Prop types
-  */
- export default connect(
+export default connect(
    (state) => {
        return {
-         isAuthenticated: state.auth.token !== null
+        isAuthenticated: state.auth.token !== null
        };
     },
    (dispatch) => {
       return {
-         onLogout: bindActionCreators(Actions.logout, dispatch)
+        onLogout: bindActionCreators(Actions.logout, dispatch)
       };
    }
 )(Logout);

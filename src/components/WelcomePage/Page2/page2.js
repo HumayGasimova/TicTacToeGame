@@ -1,40 +1,20 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 /**
- * Components
- */
-
-import ButtonImage from '../ButtonImage/buttonImage';
-
-/**
- * Pictures
- */
-
-import ticTacToe3x3 from '../../../Image/3x3TicTacToe.png';
-import ticTacToe4x4 from '../../../Image/4x4TicTacToe.png';
-/**
- * Styles
- */
+* Styles
+*/
 
 import './page2.scss';
 
 /**
- * Actions
- */
-
-import * as Actions from '../../../actions';
-import axios from 'axios';
-import { format } from 'util';
-
-/**
- * WelcomePage component definition and export
- */
+* Page2 component definition and export
+*/
 
 class Page2 extends Component {
 
@@ -45,7 +25,7 @@ class Page2 extends Component {
    constructor(props) {
         super(props);
         this.state = {
-        showImageButtons: true
+            showImageButtons: true
         }
     }
 

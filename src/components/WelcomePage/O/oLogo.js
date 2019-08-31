@@ -1,31 +1,34 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
- } from 'react';
+} from 'react';
  
- /**
-  * Components
-  */
+/**
+* Components
+*/
+
 import O from '../../XO/o';
  
- /**
-  * Styles
-  */
+/**
+* Styles
+*/
+
 import './oLogo.scss';
  
- /**
-  * App component definition and export
-  */
- export class OLogo extends Component {
+/**
+* OLogo component definition and export
+*/
+
+export class OLogo extends Component {
  
     /**
-      * Constructor
-      */
+    * Constructor
+    */
  
-     constructor(props) {
+    constructor(props) {
        super(props);
        this.state={
            slower: 0,
@@ -39,10 +42,10 @@ import './oLogo.scss';
 
     handleScroll = () => {
         let scrollHeight = document.body.scrollTop
-         this.setState({
-             slower: scrollHeight/2,
-             slower2x: scrollHeight/10
-         })
+        this.setState({
+            slower: scrollHeight/2,
+            slower2x: scrollHeight/10
+        })
     }
 
     componentWillUnmount = () => {
@@ -63,10 +66,26 @@ import './oLogo.scss';
                     screen={this.props.screen}
                 />
             </div>
-           )}else{
-               if(this.props.center){
+           )
+        }else{
+            if(this.props.center){
+            return(
+                <div  style={{transform: `translate(0px, ${this.state.slower}px)`}}>
+                    <O 
+                        radius={this.props.radius}
+                        width={this.props.widths}
+                        height={this.props.height}
+                        strokeWidth={this.props.strokeWidth}
+                        cx={this.props.cx}
+                        cy={this.props.cy}
+                        screen={this.props.screen}
+                        opacity={"0.4"}
+                    />
+                </div>
+            ) 
+            }else{
                 return(
-                    <div  style={{transform: `translate(0px, ${this.state.slower}px)`}}>
+                    <div  style={{transform: `translate(0px, -${this.state.slower}px)`}}>
                         <O 
                             radius={this.props.radius}
                             width={this.props.widths}
@@ -75,31 +94,14 @@ import './oLogo.scss';
                             cx={this.props.cx}
                             cy={this.props.cy}
                             screen={this.props.screen}
-                            opacity={"0.4"}
+                            opacity={"0.8"}
                         />
                     </div>
                 ) 
-               }else{
-                    return(
-                        <div  style={{transform: `translate(0px, -${this.state.slower}px)`}}>
-                            <O 
-                                radius={this.props.radius}
-                                width={this.props.widths}
-                                height={this.props.height}
-                                strokeWidth={this.props.strokeWidth}
-                                cx={this.props.cx}
-                                cy={this.props.cy}
-                                screen={this.props.screen}
-                                opacity={"0.8"}
-                            />
-                        </div>
-                    ) 
-               }
-           }
+            }
+        }
         
     }
-    
- 
 
     render(){
        return(
@@ -108,7 +110,7 @@ import './oLogo.scss';
             </div>
        );
     }
- }
+}
  
- export default OLogo;
+export default OLogo;
  

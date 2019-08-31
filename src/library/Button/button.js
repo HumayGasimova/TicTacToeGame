@@ -1,6 +1,6 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
@@ -9,18 +9,18 @@ import React,{
 import PropTypes from 'prop-types';
 
 /**
- * Components
- */
+* Components
+*/
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './button.scss';
 
 /**
- * Button component definition and export
- */
+* Button component definition and export
+*/
 
 class Button extends Component {
 

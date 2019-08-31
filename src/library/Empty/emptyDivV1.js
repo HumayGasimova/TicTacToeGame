@@ -1,24 +1,24 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 /**
- * Components
- */
+* Components
+*/
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './empty.scss';
 
 /**
- * EmptyDivV1 component definition and export
- */
+* EmptyDivV1 component definition and export
+*/
 
 class EmptyDivV1 extends Component {
 

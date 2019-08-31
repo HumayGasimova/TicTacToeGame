@@ -1,6 +1,6 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
@@ -8,47 +8,34 @@ import React,{
 
 import {
     connect
- } from 'react-redux';
+} from 'react-redux';
 
 import {
-bindActionCreators
+    bindActionCreators
 } from 'redux';
 
 import {
     Link
- } from 'react-router-dom';
+} from 'react-router-dom';
 
 /**
- * Components
- */
-
-
-/**
- * Styles
- */
+* Styles
+*/
 
 import './buttonImage.scss';
 
 /**
- * Actions
- */
+* Actions
+*/
 
 import * as Actions from '../../../actions';
 
 /**
- * WelcomePage component definition and export
- */
+* ButtonImage component definition and export
+*/
 
 class ButtonImage extends Component {
 
-    /**
-    * Constructor
-    */
-
-    constructor (){
-        super();
-    }
-    
     /**
     * Markup
     */

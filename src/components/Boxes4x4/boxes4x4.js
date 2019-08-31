@@ -1,27 +1,22 @@
 
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
-import {
-    connect
-} from 'react-redux';
-
-
-
 /**
- * Styles
- */
+* Styles
+*/
 
 import './boxes4x4.scss';
 
 /**
- * Box component definition and export
- */
+* Boxes4x4 component definition and export
+*/
+
 class Boxes4x4 extends Component {
 
     /**
@@ -31,7 +26,7 @@ class Boxes4x4 extends Component {
     constructor(props){
         super(props);
         this.select = React.createRef();
-     }
+    }
 
     /**
     * Methods
@@ -49,14 +44,11 @@ class Boxes4x4 extends Component {
     }
    
     componentDidMount = () => {
-        
-       this.evaluateCenter()
+        this.evaluateCenter()
         window.addEventListener('resize', this.evaluateCenter);
-
-    };
+    }
 
     renderInnerBoxes = () => {
-        
         return(
             <div 
                 ref={this.select}
@@ -64,9 +56,6 @@ class Boxes4x4 extends Component {
                 onClick={this.props.onClick}
             >
               {this.props.children}
-              {/* {this.renderWinnerLine()} */}
-              {/* {this.state.centerX}
-             {this.state.centerY} */}
             </div>
         );
     }

@@ -1,6 +1,5 @@
 import * as actionTypes from '../constants/actionTypes';
 
-
 const initialState = {
     mainBox: ['','','','',
               '','','','',
@@ -26,8 +25,7 @@ function updateBox (state = initialState, action){
             }
         default:
              return state;
-    }
-        
+    }  
 }
 
 export default updateBox;

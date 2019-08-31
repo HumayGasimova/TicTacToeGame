@@ -1,19 +1,10 @@
-// .winnerLine4x4 {
-//     position: absolute;
-//     left: -10;
-//     top: -10;
-//     width: 75%;
-//     height: 450;
-// }
-
 .horizontalLineWhite {
     stroke: #F1EBD5;
     stroke-width: 10px;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: css 5s linear forwards;
-    width: 1000px; 
-    // height: 550px;
+    width: 1000px;
 }
 
 .horizontalLineBrown {
@@ -22,8 +13,7 @@
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: css 5s linear forwards;
-    width: 1000px; 
-    // height: 550px;
+    width: 1000px;
 }
 
 .verticalLineWhite {
@@ -32,8 +22,7 @@
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: css 5s linear forwards;
-    width: 1000px; 
-    // height: 550px;
+    width: 1000px;
 }
 
 .verticalLineBrown {
@@ -42,36 +31,25 @@
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: css 5s linear forwards;
-    width: 1000px; 
-    // height: 550px;
+    width: 1000px;
 }
 
 .diagonalLineLeftWhite {
-    // border: 5px solid #F1EBD5;
-    // width: 400px;
-    // transform: rotateZ(90deg);
-    // transition: width 2s;
     stroke: #F1EBD5;
     stroke-width: 10px;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: css 5s linear forwards;
     width: 1000px;  
-    // height: 550px;
 }
 
 .diagonalLineLeftBrown {
-    // border: 5px solid #665757;
-    // width: 400px; 
-    // transform: rotateZ(90deg);
-    // transition: width 2s;
     stroke: #665757;
     stroke-width: 10px;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: css 5s linear forwards;
-    width: 1000px; 
-    // height: 550px;
+    width: 1000px;
 }
 
 .diagonalLineRightWhite {
@@ -80,8 +58,7 @@
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: css 5s linear forwards;
-    width: 1000px; 
-    // height: 550px;
+    width: 1000px;
 }
 
 .diagonalLineRightBrown {
@@ -90,8 +67,7 @@
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: css 5s linear forwards;
-    width: 1000px; 
-    // height: 550px;
+    width: 1000px;
 }
 
 @keyframes css {
@@ -99,3 +75,4 @@
       stroke-dashoffset: 0;
     }
   }
+  

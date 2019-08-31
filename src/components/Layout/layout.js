@@ -1,18 +1,18 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React from 'react';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './layout.scss';
 
 /**
- * Layout component definition and export
- */
+* Layout component definition and export
+*/
 
 export const Layout = (props) => {
     return(
@@ -26,4 +26,3 @@ export const Layout = (props) => {
 }
 
 export default Layout;
-

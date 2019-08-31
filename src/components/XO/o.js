@@ -1,20 +1,20 @@
 /**
- * Libraries
- */
+* Libraries
+*/
 
 import React,{
     Component
 } from 'react';
 
 /**
- * Styles
- */
+* Styles
+*/
 
 import './xo.scss';
 
 /**
- * O component definition and export
- */
+* O component definition and export
+*/
 
 class O extends Component {
 
@@ -28,9 +28,8 @@ class O extends Component {
                 width={this.props.width} 
                 height={this.props.height} 
                 xmlns="http://www.w3.org/2000/svg"
-                // viewBox="0 0 303 303" 
                 viewBox={this.props.viewBox}
-                >
+            >
                 <circle 
                     className={this.props.animationShow ? "circle" : null} 
                     r={this.props.radius} 
