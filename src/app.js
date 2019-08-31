@@ -48,8 +48,6 @@ import Welcome from './components/WelcomePage/welcomePage';
 
     renderRoutes = () => {
         if(this.props.isAuthenticated){
-
-            debugger
             return(
                 <div>
                     <Switch>
