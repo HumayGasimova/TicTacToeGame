@@ -60,6 +60,7 @@ class Input extends Component {
                             } 
                             value={this.props.value} 
                             {...this.props.elementconfig}
+                            type={this.props.type}
                             onChange={this.props.onChange}
                         />
                         {this.renderErrorMessage()}
@@ -108,6 +109,7 @@ class Input extends Component {
                         }
                         value={this.props.value} 
                         {...this.props.elementconfig}
+                        type={this.props.type}
                         onChange={this.props.onChange}
                     />
                    

@@ -63,7 +63,8 @@ class SignUp extends Component {
                     ],
                     validField: "false",
                     touched: "false",
-                    errorMessage: []
+                    errorMessage: [],
+                    type: "text"
                 },
                 email: {
                     elementType: 'input',
@@ -84,7 +85,8 @@ class SignUp extends Component {
                     ],
                     validField: "false",
                     touched: "false",
-                    errorMessage: []
+                    errorMessage: [],
+                    type: "text"
                 },
                 password: {
                     elementType: 'input',
@@ -105,7 +107,8 @@ class SignUp extends Component {
                     ],
                     validField: "false",
                     touched: "false",
-                    errorMessage: []
+                    errorMessage: [],
+                    type: "password"
                 }
             },
             formIsValid: false
@@ -244,6 +247,7 @@ class SignUp extends Component {
                                     shouldvalidate={formElement.config.validation}
                                     className={"input_error"}
                                     touched={formElement.config.touched}
+                                    type={formElement.config.type}
                                 />
                                 <EmptyDivV1/>
                             </div>

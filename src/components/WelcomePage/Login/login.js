@@ -66,7 +66,8 @@ class Login extends Component {
                     ],
                     validField: "false",
                     touched: "false",
-                    errorMessage: []
+                    errorMessage: [],
+                    type: "text"
                 },
                 password: {
                     elementType: 'input',
@@ -87,7 +88,8 @@ class Login extends Component {
                     ],
                     validField: "false",
                     touched: "false",
-                    errorMessage: []
+                    errorMessage: [],
+                    type: "password"
                 }
             },
             formIsValid: false
@@ -224,6 +226,7 @@ class Login extends Component {
                                     shouldvalidate={formElement.config.validation}
                                     className={"input_error"}
                                     touched={formElement.config.touched}
+                                    type={formElement.config.type}
                                 />
                                 <EmptyDivV1/>
                             </div>
